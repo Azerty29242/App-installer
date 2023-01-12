@@ -1,3 +1,5 @@
+var option;
+
 function getApps(callback) {
     fetch("https://raw.githubusercontent.com/Azerty29242/App-installer/main/apps.json")
         .then((response) => response.json())
@@ -24,7 +26,6 @@ async function getLatestRelease(name, author, callback) {
         .then((releases) => {
             try {
                 var latest = releases[0]
-                console.log(`https://api.github.com/repos/${author}/${name}/releases/${latest.id}/assets`)
                 fetch(`https://api.github.com/repos/${author}/${name}/releases/${latest.id}/assets`)
                     .then((response) => response.json())
                     .then((assets) => {
@@ -39,5 +40,13 @@ async function getLatestRelease(name, author, callback) {
 }
 
 getApps((apps) => {
-    console.log(apps)
+    var options = []
+    apps.forEach((app) => {
+        option = document.createElement("option")
+        option.value = `${app.author}/${app.name}`
+        option.innerHTML = app.name
+    })
+    $('select').formSelect({
+        dropdownOptions: options
+    });
 })

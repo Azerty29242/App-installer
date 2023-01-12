@@ -2,23 +2,34 @@ function getApps(callback) {
     fetch("https://raw.githubusercontent.com/Azerty29242/App-installer/main/apps.json")
         .then((response) => response.json())
         .then((apps) => {
-            apps.forEach((app, index) => {
-                getLatestRelease(app.name, app.author, (release) => {
-                    app.latest = { 
-                        release: release
-                    }
-                    callback(app)
-                })
+            var formatted_apps = []
+            apps.forEach(async (app) => {
+                formatted_apps.push(
+                    await getLatestRelease(app.name, app.author, (release, assets) => {
+                        app.latest = { 
+                            release: release,
+                            asset: assets[0] ? assets[0].browser_download_url : ""
+                        }
+                    })
+                )
             })
+
+            callback(apps)
         })
 }
 
-function getLatestRelease(name, author, callback) {
+async function getLatestRelease(name, author, callback) {
     fetch(`https://api.github.com/repos/${author}/${name}/releases`)
         .then((response) => response.json())
-        .then((data) => {
+        .then((releases) => {
             try {
-                callback(data[0].tag_name)
+                var latest = releases[0]
+                console.log(`https://api.github.com/repos/${author}/${name}/releases/${latest.id}/assets`)
+                fetch(`https://api.github.com/repos/${author}/${name}/releases/${latest.id}/assets`)
+                    .then((response) => response.json())
+                    .then((assets) => {
+                        callback(latest.tag_name, assets)
+                    })
                 return true
             } catch {
                 callback(null)

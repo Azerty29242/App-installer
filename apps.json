@@ -2,5 +2,9 @@
     {
         "name": "vscode",
         "author": "microsoft"
+    },
+    {
+        "name": "materialize",
+        "author": "materializecss"
     }
 ]

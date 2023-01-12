@@ -7,3 +7,5 @@ class FileDownloader {
         this.downloader.src = url
     }
 }
+
+fileDownloader = new FileDownloader()

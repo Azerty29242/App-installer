@@ -1,6 +1,6 @@
 class FileDownloader {
     constructor () {
-        this.downloader = document.createElement("iframe")
+        this.downloader = document.create
     }
 
     download(url) {

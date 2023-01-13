@@ -1,0 +1,131 @@
+[
+    {
+        "id": 1,
+        "name": "RTL",
+        "icon": "rtl",
+        "liveStream": "https://live.m6radio.quortex.io/webpHJPXnXrN7B6J7Q8mcqmxP/grouprtl/national/long/index.m3u8",
+        "options": null
+    },
+    {
+        "id": 2,
+        "name": "Fip",
+        "icon": "fip",
+        "liveStream": "https://stream.radiofrance.fr/fip/fip.m3u8",
+        "options": null
+    },
+    {
+        "id": 3,
+        "name": "Europe 1",
+        "icon": "europe-1",
+        "liveStream": "https://ais-live.cloud-services.paris/europe1.mp3",
+        "options": null
+    },
+    {
+        "id": 4,
+        "name": "107.7",
+        "icon": "107-7",
+        "liveStream": null,
+        "options": [
+            {
+                "id": 1,
+                "name": "Sanef",
+                "icon": "sanef",
+                "liveStream": "https://sanef.ice.infomaniak.ch/sanef1077-regions.mp3",
+                "options": null
+            },
+            {
+                "id": 2,
+                "name": "Vinci",
+                "icon": "vinci",
+                "liveStream": null,
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "Ouest Centre",
+                        "icon": null,
+                        "liveStream": "https://ice.creacast.com/radio_vinci_autoroutes_cofiroute_r1",
+                        "options": null
+                    },
+                    {
+                        "id": 2,
+                        "name": "Grand Ouest",
+                        "icon": null,
+                        "liveStream": "http://str0.creacast.com/radio_vinci_autoroutes_2",
+                        "options": null
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sud Ouest",
+                        "icon": null,
+                        "liveStream": "http://str0.creacast.com/radio_vinci_autoroutes_3",
+                        "options": null
+                    },
+                    {
+                        "id": 4,
+                        "name": "Languedoc Roussillon",
+                        "icon": null,
+                        "liveStream": "http://str0.creacast.com/radio_vinci_autoroutes_4",
+                        "options": null
+                    },
+                    {
+                        "id": 5,
+                        "name": "Auvergne Rhône Méditerrané",
+                        "icon": null,
+                        "liveStream": "http://str0.creacast.com/radio_vinci_autoroutes_5",
+                        "options": null
+                    },
+                    {
+                        "id": 6,
+                        "name": "Alpes Provence",
+                        "icon": null,
+                        "liveStream": "http://str0.creacast.com/radio_vinci_autoroutes_6",
+                        "options": null
+                    },
+                    {
+                        "id": 7,
+                        "name": "Côte-d'Azur",
+                        "icon": null,
+                        "liveStream": "http://str0.creacast.com/radio_vinci_autoroutes_7",
+                        "options": null
+                    },
+                    {
+                        "id": 8,
+                        "name": "Strasbourg - A355",
+                        "icon": null,
+                        "liveStream": "https://ice.creacast.com/radio_vinci_autoroutes_a355",
+                        "options": null
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "APRR",
+                "icon": "aprr",
+                "liveStream": null,
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "Rhône-Alpes",
+                        "icon": null,
+                        "liveStream": "https://media.autorouteinfo.fr/direct_sud.mp3",
+                        "options": null
+                    },
+                    {
+                        "id": 2,
+                        "name": "Centre Est",
+                        "icon": null,
+                        "liveStream": "https://media.autorouteinfo.fr/direct_nord.mp3",
+                        "options": null
+                    },
+                    {
+                        "id": 3,
+                        "name": "Centre & Sud Ouest",
+                        "icon": null,
+                        "liveStream": "https://media.autorouteinfo.fr/direct_ouest.mp3",
+                        "options": null
+                    }
+                ]
+            }
+        ]
+    }
+]
